@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mobilebanking-rs
+  name: insurance-deploy
   labels:
     app: bank
 spec:
@@ -16,12 +16,12 @@ spec:
     spec:
       containers:
       - name: cont1
-        image: reyadocker/internetbankingrepo:latest
+        image: xdmahtab/insurance-image:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mobilebankingservice
+  name: insurancebankingservice
 spec:
   type: LoadBalancer
   selector:
